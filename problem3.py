@@ -8,9 +8,12 @@ def get_factors(n):
             factors.append(x)
     return factors
 
+largest = 0
 for x in get_factors(n):
-    if len(get_factors(x)) < 1:
-        print x
+    if len(get_factors(x)) < 1 and x > largest:
+        largest = x
+
+print largest
 
     
 
